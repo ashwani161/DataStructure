@@ -22,6 +22,18 @@ public class LinkedList {
 		}
 		
 	}
+	
+	public void append(INode node) {
+		if(this.head == null) {
+			this.head = node;
+		}
+		if(this.tail == null) {
+			this.tail = node;
+		}else {
+			this.tail.setNext(node);
+			this.tail = node;
+		}
+	}
 	public void printNodes() {
 		StringBuffer nodes = new StringBuffer("Nodes: ");
 		INode tempNode = head;
