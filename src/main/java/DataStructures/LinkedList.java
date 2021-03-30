@@ -40,6 +40,13 @@ public class LinkedList {
 		node.setNext(newNode);
 		newNode.setNext(tempNode);
 	}
+	
+	public INode pop() {
+		INode tempNode = this.head;
+		this.head = head.getNext();
+		return tempNode;
+	}
+	
 	public void printNodes() {
 		StringBuffer nodes = new StringBuffer("Nodes: ");
 		INode tempNode = head;
@@ -52,5 +59,4 @@ public class LinkedList {
 		nodes.append(tempNode.getKey());
 		System.out.println(nodes);
 	}
-
 }
