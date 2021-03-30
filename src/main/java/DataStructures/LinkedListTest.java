@@ -95,5 +95,24 @@ public class LinkedListTest {
 		Assert.assertTrue(result);
 
 	}
+	
+	@Test
+	public void given4NumbersWhenInsertingSecondAfter30ShouldPassLinkedListResult() {
+			Node<Integer> myFirstNode = new Node<>(56);
+			Node<Integer> mySecondNode = new Node<>(30);
+			Node<Integer> myThirdNode = new Node<>(40);
+            Node<Integer> myFourthNode = new Node<>(70);
+			LinkedList linkedList = new LinkedList();
+			linkedList.add(myFirstNode);
+			linkedList.append(mySecondNode);
+            linkedList.append(myFourthNode);
+			linkedList.insert(linkedList.search(mySecondNode),myThirdNode);
+			linkedList.printNodes();
+			boolean result = linkedList.head.getKey().equals(myFirstNode.getKey()) &&
+					         linkedList.head.getNext().getKey().equals(mySecondNode.getKey()) &&					         
+					         mySecondNode.getNext().getKey().equals(myThirdNode.getKey()) &&
+					         linkedList.tail.getKey().equals(myFourthNode.getKey());
+			Assert.assertTrue(result);
+		}
 
 }
