@@ -1,22 +1,30 @@
 package DataStructures;
 
-public class Node<k> {
+public class Node<K> implements INode<K> {
 	// Represent a node of the linked list
-	private k key;
-	private Node next;  
+	private K key;
+	private INode next;  
 
-	public Node(k key) {
-		this.key = null;
+	public Node(K key) {
+		this.key = key;
 		this.next = null;
 	}
+	 public K getKey() {
+		return key;
+	}
 	
-	public Node getNext() {
+	public void setKey(K key) {
+		this.key = key;
+	}
+	
+	public INode<?> getNext() {
 		return next;
 	}
 	
-	public void setNext(Node next) {
+	public void setNext(INode next) {
 		this.next = next;
 	}
+	
 }
 
 
