@@ -26,6 +26,13 @@ public class Node<K> implements INode<K> {
 		this.next = next;
 	}
 	
+	public int compareTo(INode<K> currentNode) {
+		if (this.getKey().equals(null) || currentNode.getKey().equals(null)) {
+			return 0;
+		}
+		return ((Comparable<K>) this.getKey()).compareTo(currentNode.getKey());
+	}
+	
 }
 
 
