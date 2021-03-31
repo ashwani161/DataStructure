@@ -18,7 +18,7 @@ public class QueueTest {
 		INode peak = queue.peak();
 		Assert.assertEquals(myFirstNode, peak);
 	 
-	}
+	}	
 	
 	@Test
 	public void given3NumbersInQueue_WhenPopedShouldMatchFirstAddedNode() {

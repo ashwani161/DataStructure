@@ -14,8 +14,8 @@ public class StackTest {
 		stack.push(myFirstNode);
 		stack.push(mySecondNode);
 		stack.push(myThirdNode);
-		stack.printStack();
 		INode peak = stack.peak();
+		stack.printStack();
 		Assert.assertEquals(myThirdNode, peak);
 	 
 	}
