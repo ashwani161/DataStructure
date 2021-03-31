@@ -21,6 +21,7 @@ public class Node<K> implements INode<K> {
 		return next;
 	}
 	
+	@Override
 	public void setNext(INode next) {
 		this.next = next;
 	}

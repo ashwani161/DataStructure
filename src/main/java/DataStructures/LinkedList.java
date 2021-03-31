@@ -79,4 +79,10 @@ public class LinkedList {
 		nodes.append(tempNode.getKey());
 		System.out.println(nodes);
 	}
+
+	public INode delete(INode tempNode) {
+		tempNode.setNext(tempNode.getNext().getNext());
+		return tempNode;
+		
+	}
 }

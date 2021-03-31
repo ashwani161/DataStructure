@@ -114,5 +114,23 @@ public class LinkedListTest {
 					         linkedList.tail.getKey().equals(myFourthNode.getKey());
 			Assert.assertTrue(result);
 		}
-
+	
+	@Test
+	public void given4NumbersWhenDeletingSecondAfter30ShouldPassLinkedListResult() {
+			Node<Integer> myFirstNode = new Node<>(56);
+			Node<Integer> mySecondNode = new Node<>(30);
+			Node<Integer> myThirdNode = new Node<>(40);
+            Node<Integer> myFourthNode = new Node<>(70);
+			LinkedList linkedList = new LinkedList();
+			linkedList.add(myFirstNode);
+			linkedList.append(mySecondNode);
+			linkedList.append(myThirdNode);
+            linkedList.append(myFourthNode);
+			linkedList.delete(linkedList.search(mySecondNode));
+			linkedList.printNodes();
+			boolean result = linkedList.head.getKey().equals(myFirstNode.getKey()) &&
+					         linkedList.head.getNext().getKey().equals(mySecondNode.getKey()) &&					         
+                             linkedList.tail.getKey().equals(myFourthNode.getKey());
+			Assert.assertTrue(result);
+		}
 }
