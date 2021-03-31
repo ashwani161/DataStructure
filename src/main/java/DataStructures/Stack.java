@@ -1,12 +1,12 @@
 package DataStructures;
 
 public class Stack {
-	private static LinkedList linkedList;
+	private LinkedList linkedList;
 	
 	public Stack() {
 		this.linkedList = new LinkedList();
 	}
-	public static  void push(INode node) {
+	public void push(INode node) {
 		linkedList.add(node);
 		
 	}
@@ -17,5 +17,8 @@ public class Stack {
 		return linkedList.head;
 		
 	}
-
+	public INode pop() {
+		return linkedList.pop(); 
+	}
+	
 }
