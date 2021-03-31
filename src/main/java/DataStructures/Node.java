@@ -30,7 +30,12 @@ public class Node<K> implements INode<K> {
 		if (this.getKey().equals(null) || currentNode.getKey().equals(null)) {
 			return 0;
 		}
-		return ((Comparable<K>) this.getKey()).compareTo(currentNode.getKey());
+		return ((Comparable<K> )this.getKey()).compareTo(currentNode.getKey());
+	}
+	@Override
+	public int compareTo(K o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 }
